@@ -1,0 +1,60 @@
+# 上海财经大学可用数据库清单（科研检索用）
+# 参考图书馆数据库导航 az.php，标注了 WebVPN 可用性
+
+# 英文文献
+- name: ScienceDirect
+  url: https://www-sciencedirect-com-s.webvpn.sufe.edu.cn/
+  webvpn: ok            # WebVPN 包装地址正常，机构访问生效
+  note: 检索下载顺畅，遇到拒绝页会停下
+
+- name: Springer Link
+  url: https://link-springer-com-s.webvpn.sufe.edu.cn/
+  webvpn: ok
+
+- name: Oxford Academic
+  url: https://academic-oup-com-s.webvpn.sufe.edu.cn/
+  webvpn: ok
+
+- name: Scopus
+  url: https://www-scopus-com-s.webvpn.sufe.edu.cn/
+  webvpn: ok
+
+- name: EconLit (EBSCO)
+  url: https://research.ebsco.com/
+  webvpn: ok
+
+# 中文文献
+- name: CNKI 中国知网
+  url: https://www.cnki.net/
+  webvpn: broken        # WebVPN 包装地址有 bug，报 IP 不在许可范围
+  note: 不走 WebVPN，直接用个人账号登录 www.cnki.net
+
+- name: 万方数据
+  url: https://www.wanfangdata.com.cn/
+  webvpn: ok
+
+- name: 维普中文期刊
+  url: http://www.cqvip.com/
+  webvpn: ok
+
+# 数据平台
+- name: CSMAR 国泰安
+  url: https://data.csmar.com/
+  webvpn: ok
+  note: 财务报表、财务指标、红利分配等
+
+- name: Wind 终端
+  url: https://www.wind.com.cn/
+  webvpn: n/a
+  note: 桌面客户端，不依赖 WebVPN
+
+- name: WRDS
+  url: https://wrds-www.wharton.upenn.edu/
+  webvpn: ok
+
+# 检索纪律（防机构账号被封）
+limits:
+  daily_downloads: 15
+  same_paper_per_day: 2
+  download_interval_seconds: 15
+  search_interval_seconds: 20
